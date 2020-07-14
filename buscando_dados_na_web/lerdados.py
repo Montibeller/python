@@ -2,7 +2,10 @@ import investpy as inv
 import pandas as pd
 
 # fazendo uma listagem de todas as ações no banco de dados
-acoes_br = inv.get_stocks('brazil')
+""" acoes_br = inv.get_stocks('brazil')
+print(acoes_br) """
+
+acoes_br = inv.get_stocks_list('brazil')
 print(acoes_br)
 
 # buscando uma descrição de uma ação
