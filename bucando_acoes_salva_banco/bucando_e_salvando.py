@@ -15,12 +15,12 @@ create_tabela_acoes()
 def create_tabela_cotacoes():
 	c.execute('''CREATE TABLE IF NOT EXISTS cotacoes(
 					id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-					acao INTEGER,
+					acao INTEGER REFERENCES acoes (id),
 					abertura REAL,
 					fechamento REAL,
 					maxima REAL,
 					minima REAL,
-					volume REAL,)''')
+					volume REAL)''')
 create_tabela_cotacoes()
 
 #acoes_br = inv.get_stocks_list('brazil')
